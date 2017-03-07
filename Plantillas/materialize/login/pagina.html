@@ -1,0 +1,203 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="es">-->
+<!--    <head>-->
+<!--        <title></title>-->
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="Plantillas/materialize/css/login.css" />
+        <link rel="stylesheet" href="Plantillas/materialize/css/footer.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link rel="stylesheet" href="Plantillas/materialize/font-awesome/css/font-awesome.min.css">
+       
+    </head>
+    <body>
+       
+        <header>
+            <nav>
+                <form id="menu">
+                    
+                    <label>Grupos:
+                    <select id="grupopantalla">
+                        {Grupos}
+                    </select>
+                    </label>
+                    <input type="text" name="tituloNotaBuscando" placeholder="Buscar nota por titulo"/>
+                
+                <div id="fotoPerfil">
+                    <img src="Plantillas/materialize/fotos-plantilla/user.svg"/>
+                      <aside id="desplegableDerecho" class="oculto">
+                      <div id="desplegablePerfil">
+                            <ol>
+                                <li id="cerrarSesion"><a href="?ruta=login&accion=dologout">Cerrar Sesion</a></li>
+                                <li id="desplegableEditar"><a href="#vEditar">Editar Perfil</a></li>
+                                <li id="borrarcuenta"> Borra Cuenta </li>
+                            </ol>
+                        </div> 
+                </aside>
+                </div>
+                </form>
+                
+                
+            </nav>
+
+        </header>
+        
+        <div id="wrapper">
+        
+            <aside id="submenu">
+                    
+                        <div id="accordian">
+                                    <h3>Buscar</h3>
+                                            <div id="formularioGrupo">
+                                                 <h2 id="h2Buscar">Buscar</h2>
+                                                <form id="tipo_busqueda">
+                                                        <label>
+                                                        <input name="foto" type="checkbox" value="foto">
+                                                        Fotos</label>
+                                                        <br>
+                                                        <label>
+                                                         <input name="video" type="checkbox" value="video">
+                                                            Videos</label>
+                                                        <br>
+                                                        <label>
+                                                         <input name="archivo"type="checkbox" value="archivo">
+                                                        Archivos</label>
+                                                </form>
+                                                <h2 id="h2Donde">Grupo donde buscar</h2>
+                                               
+                                                <select>
+                                                    {Grupos}
+                                                </select>
+                                                <button id="realizarBusqueda" class="botonCrear">
+                                                        Buscar  
+                                                </button>
+                                            </div>
+                                    <h3>Grupos</h3>
+                                            <div id="administrarGrupo">
+                                                <h2 id="h2Gestionar">Grupo a gestionar</h2>
+                                                    <select id="selectGrupo">
+                                                        {Grupos}
+                                                    </select>
+                                                        <ol>
+                                                                 <li id="liInvitar">Invitar usuario</li>
+                                                                 <form id="formInvitar">
+                                                                   <h1 class="titInvitarUsuario">Invitar Usuario</h1>
+                                                                   <input type="hidden" name="ruta" value="gestiongrupogrupousuario">
+                                                                    <input type="hidden" name="accion" value="invitar">
+                                                                   <input  class="inputInvitar" type="text" name="invitarUsuario0" placeholder="Correo del Usuario">    
+                                                                   <br>
+                                                                   <button id="agregarUsuarioAcordeon" name="add">+</button> 
+                                                                   <br>
+                                                                   <input id="botonCrearInvitado" class="botonCrear"type="submit" name="crear" value="Crear"/>
+                                                                 </form>
+                                                                
+                                                             <li id="enlaceCrearGrupo">Crear Grupo</li>
+                                                            <li>Usuarios</li>
+                                                            {usuarios}
+                                                              
+                                                        
+                                                        </ol>
+                                                
+                                            </div>
+                                    <h3 id="h3CrearNota">Crear Nota</h3>
+                        </div>
+            </aside>
+            <section id="contenidoDes">
+              
+               
+                <section id="crearNota">
+                    <img id="plusNota" src="Plantillas/materialize/fotos-plantilla/add-circular-button-outline-with-plus-sign.png"/>
+                    <p id="mensajeCrearNota">Crear Nota</p>
+                    <p id="tituloCrearNota">Introduce Titulos para tus notas!</p>
+                    <p id="multimediaCrearNota">Introduce texto y cualquier tipo de media!!</p>
+                </section>
+                
+                <section id="todasNotas">
+                        {Notas}
+                        <section id="editarPerfil" class="oculto">
+                    <span>Editar Perfil</span>
+                    <form id="formularioEditar">
+                       
+                            <input type="hidden" name="ruta" value="usuario">
+                            <input type="hidden" name="accion" value="doedit">
+                               
+                                    <input id="nombre" type="text" name="nombre" placeholder="Nombre">
+                                
+                                    <input id="apellido" type="text" name="apellido" placeholder="Apellidos">
+                               
+                                    <input id="direccion" type="text" name="direccion" placeholder="Direccion">
+                                
+                                    <input id="movil" type="text" name="movil" placeholder="Movil">
+                                
+                                    <input id="password3" type="password" name="password" placeholder="Contraseña">
+                                
+                                    <input id="password4" type="password" name="password2" placeholder="Repetir Contraseña">
+                                                          
+                                    <input id="enviar"type="submit" name="enviar" value="Enviar"/>
+                                    
+                     </form>
+                    <button id="salirEditar"name="salir" value="salir">Salir</button>  
+                </section>
+                
+                <section id="crearGrupo" class="oculto">
+                        <span>Crear Grupo</span>
+                        <form>
+                       
+                            <input type="hidden" name="ruta" value="gestiongrupogrupousuario">
+                            
+                            <input type="hidden" name="accion" value="doinsertgrupogrupousuario">
+                            
+                            <input id="nombreGrupo" type="text" name="nombre" placeholder="Nombre del Grupo">
+    
+                            <h1 class="titInvitarUsuario" id="introducirInputGrupo">Invitar Usuario</h1>
+                            
+                            <input  id="primero"class="inputInvitar"type="text" name="invitarUsuario0" placeholder="Correo del Usuario">    
+                            
+                            <button id="agregarUsuarioGrupo" name="add">+</button> 
+    
+                            <input id="botonCrearGrupo" class="botonCrear" type="submit" name="crear" value="Crear"/>
+                                    
+                        </form>
+                        
+                        <button id="salirGrupo" name="salir" value="salir">Salir</button>  
+                </section>
+             
+                <section id="modalNota" class="oculto">
+                <span>Crea tu Nota</span>
+                        <form enctype="multipart/form-data" method="POST" action="index.php?ruta=media&accion=doinsertMedia">
+                            <input type="hidden" name="ruta" value="media">
+                            <input type="hidden" name="accion" value="doinsertMedia"> 
+                            <input type="hidden" name="tipo" value="normal">
+                            <input type="hidden" name="estado" value="normal">
+                           
+                            <input id="titulo" type="text" name="titulo" placeholder="Titulo de tu nota"/>
+                           
+                            <textarea id="textAreaEscribir" name="texto" placeholder="Escriba su nota e introduzca las medias que desee!!! :)" ></textarea> 
+                            
+                            <input id="botonCrearNota" class="botonCrear" type="submit" name="crear" value="Crear"/>
+                          
+                           <input lass="salirNota" type="file" class="botonCrear"  name="subir" value="Subir Media"> 
+                        </form>
+                        
+                             <button class="salirNota"name="salir" value="salir">Salir</button>  
+              </section>
+                </section>
+            
+                <section id="modalInvitacion">
+                {invitacion} 
+                </section> 
+        
+            </section>
+       
+        
+        </div>
+        
+        {archivo-footer}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- prefix free to deal with vendor prefixes -->
+        <script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript" type="text/javascript"></script>
+        <!-- jQuery -->
+        <script src="http://thecodeplayer.com/uploads/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="Plantillas/materialize/js/script.js" defer></script>
+    </body>
+</html>

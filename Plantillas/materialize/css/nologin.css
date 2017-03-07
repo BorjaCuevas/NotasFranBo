@@ -1,0 +1,826 @@
+/* reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+/*reset*/
+
+html, body{
+    position: relative;
+    width: 100%;
+    height: 98%;
+    background-image: url("../fotos-plantilla/pattern.jpg");
+    background-size: 150%;
+}
+
+#wrapper{
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: grey;
+}
+
+section{
+    background: rgba(228, 228, 228, 0.8);
+    overflow: hidden;
+}
+
+.postit{
+    background: url('../fotos-plantilla/post-it.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 57%;
+    width: 32%;
+}
+
+/*------------------- PRIMERO ---------------------*/
+
+.primera{
+    position: relative;
+    height: 98%;
+    width: 100%;
+    background: url("../fotos-plantilla/fondo.jpg");
+}
+
+.primera .logo{
+    position: absolute;
+    background: url("../fotos-plantilla/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    right: 9%;
+    top: 9%;
+    height: 120px;
+    width: 120px;
+}
+
+.primera #post{
+    position: absolute;
+    background-color: rgba(117, 36, 168, 0.37);
+    height: 40%;
+    width: 36%;
+    min-width: 280px;
+    top: 51%;
+    left: 12%;
+    border-radius: 4%;
+}
+
+.primera #post #selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    margin-top: 2%;
+}
+
+.primera #post #selector div{
+    height: 50%;
+    width: 40%;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.primera #post #selector div h4{
+    margin-bottom: 4%;
+}
+
+.primera #post #selector .selected{
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.primera #post #selector .selected h4{
+    margin-bottom: 30%;
+}
+
+.primera #post .log{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 80%;
+}
+
+.primera #post .log form{
+    display: flex;
+    max-width: 100%;
+    height: 63%;
+    flex-direction:column;
+    justify-content: space-around;
+    margin-left: 18%;
+}
+
+.primera #post .log form .submit{
+    max-width: 150px;
+    height:20px;
+    min-width: 100px;
+}
+.primera #post .log form .submit2{
+    max-width: 150px;
+    height:20px;
+    min-width: 100px;
+}
+
+.primera #post .oculto{
+    display: none;
+}
+
+/*--------------------- SEGUNDO ---------------*/
+
+
+.segunda {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.segunda .gris{
+    position: absolute;
+    background-color: gray;
+    height: 90%;
+    width: 37.499%;
+    display: flex;
+    top: 5%;
+    border-radius: 50%;
+    left: -22.5%;
+}
+
+.segunda .gris #colores{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.segunda .gris .colormovil{
+    position: absolute;
+    top: 30%;
+    height: 39.217%;
+}
+
+/*.segunda .gris .colorfijo{*/
+/*    position: fixed;*/
+/*    top: 30%;*/
+/*    left: -66.59%;*/
+/*    height: 33.898%;*/
+/*}*/
+
+.segunda .gris #colores div{
+    height: 20px;
+    width: 20px;
+    margin-left: 68%;
+    border-radius: 50%;
+}
+
+.segunda .gris #colores .actual{
+    height: 25px;
+    width: 25px;
+}
+
+.segunda .gris #colores .amarillo{
+    background-color: #EEBF2F;
+}
+
+.segunda .gris #colores .rojo{
+    background-color: #DC3F0F;
+}
+
+.segunda .gris #colores .azul{
+    background-color: #69BAD1;
+}
+
+.segunda .gris #colores .verde{
+    background-color: #9BC154;
+}
+
+.segunda .gris .nombregrupos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.segunda .gris .nombremovil{
+    position: absolute;
+    top: 29%;
+    height: 40%;
+    font-size: 1.4em;
+}
+
+/*.segunda .gris .nombrefijo{*/
+/*    position: fixed;*/
+/*    top: 30%;*/
+/*    left: -70.38%;*/
+/*    height: 34.574%;*/
+/*}*/
+
+.segunda .gris .nombregrupos p{
+    color: white;
+    height: 20px;
+    width: 20px;
+    margin-left: 74%;
+    border-radius: 50%;
+}
+
+.segunda .gris .nombregrupos .actual{
+    font-size: 1.2em;
+    text-shadow: black;
+}
+
+.segunda .grupos{
+    position: absolute;
+    background: url('../fotos-plantilla/grupos.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 10%;
+    height: 100%;
+    width: 25%;
+}
+
+.segunda .texto{
+    position: absolute;
+    height: 91%;
+    width: 65%;
+    top: 4%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.segunda .texto div{
+    height: 14%;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.segunda .texto div:nth-of-type(2), .segunda .texto div:nth-of-type(3){
+    margin-left: 6%;
+}
+
+.segunda .texto div p:first-child{
+    margin-left: 38%;
+}
+
+.segunda .postit{
+    position: absolute;
+    top: 20%;
+    left: 66%;
+}
+
+.segunda .postit p:first-child{
+    position: absolute;
+    height: 10%;
+    width: 44%;
+    top: 19%;
+    left: 32%;
+    font-size: 1.4em;
+    color: red;
+}
+
+.segunda .postit p:last-child{
+    position: absolute;
+    height: 10%;
+    width: 38%;
+    top: 40%;
+    left: 33%;
+    font-size: 1em;
+    color: red;
+}
+
+
+/*---------------------GRUPOS--------------------*/
+
+.resto{
+    position: relative;
+    height: 3300px;
+    width: 100%;
+}
+
+/*---------------------GRUPOS-PERSONAL------------------*/
+
+
+.resto .personal{
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    height: 102%;
+    width: 100%;
+}
+
+.resto .personal .logo{
+    position: relative;
+    background: url('../fotos-plantilla/personal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 230px;
+    left: 7%;
+    z-index: 1;
+}
+
+.resto .personal .logo p:nth-of-type(1){
+    position: absolute;
+    top: 19%;
+    left: 25%;
+    font-size: 1.4em;
+}
+
+.resto .personal .logo p:nth-of-type(2){
+    position: absolute;
+    color: white;
+    width: 50%;
+    top: 39%;
+    left: 20%;
+    transform: rotate(0deg);
+}
+
+.resto .personal p:nth-of-type(1){
+    position: absolute;
+    width: 45%;
+    top: 15%;
+    left: 29%;
+}
+
+.resto .personal .foto{
+    position: absolute;
+    background: url('../fotos-plantilla/personal.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 3%;
+    left: 5%;
+    height: 80%;
+    width: 70%;
+    z-index: 0;
+}
+
+.resto .personal .postit{
+    position: relative;
+    height: 21%;
+    width: 32%;
+    top: 7%;
+    left: 22%;
+    z-index: 1;
+}
+
+.resto .familia p:nth-of-type(2){
+    position: absolute;
+    top: 68%;
+    left: 60%;
+    transform: rotate(-3deg);
+}
+
+.resto .familia p:nth-of-type(3){
+    position: absolute;
+    top: 72%;
+    left: 60%;
+    transform: rotate(-4deg);
+}
+
+
+/*---------------------GRUPOS-FAMILIA------------------*/
+.resto .familia{
+    position: absolute;
+    top: 19%;
+    height: 45%;
+    width: 100%;
+}
+
+.resto .familia .logo{
+    position: relative;
+    background: url('../fotos-plantilla/casa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 32%;
+    left: 11%;
+    height: 230px;
+    width: 230px;
+    z-index: 1;
+}
+
+.resto .familia .logo p:nth-of-type(1){
+    position: absolute;
+    top: 5%;
+    left: 38%;
+    font-size: 1.4em;
+}
+
+.resto .familia .logo p:nth-of-type(2){
+    position: absolute;
+    color: white;
+    width: 60%;
+    top: 10%;
+    left: 30%;
+    transform: rotate(0deg);
+}
+
+.resto .familia p:nth-of-type(1){
+    position: absolute;
+    width: 41%;
+    top: 32%;
+    left: 25%;
+}
+
+.resto .familia .foto{
+    position: absolute;
+    background: url('../fotos-plantilla/family.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 23%;
+    left: 16%;
+    height: 71%;
+    width: 70%;
+    transform:scaleX(-1);
+}
+
+.resto .familia .postit{
+    position: relative;
+    height: 23%;
+    width: 33%;
+    top: -10%;
+    left: 34%;
+}
+
+.resto .familia p:nth-of-type(2){
+    position: absolute;
+    top: 68%;
+    left: 60%;
+    transform: rotate(-3deg);
+}
+
+.resto .familia p:nth-of-type(3){
+    position: absolute;
+    top: 72%;
+    left: 60%;
+    transform: rotate(-4deg);
+}
+
+/*---------------------GRUPOS-TRABAJO------------------*/
+
+.resto .trabajo{
+    position: relative;
+    top: 52%;
+    height: 44%;
+    width: 100%;
+}
+
+.resto .trabajo .logo{
+    position: relative;
+    background: url('../fotos-plantilla/trabajo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 13%;
+    height: 230px;
+    width: 230px;
+    z-index: 1;
+}
+
+.resto .trabajo .logo p:nth-of-type(1){
+    position: absolute;
+    top: 25%;
+    left: 37%;
+    font-size: 1.4em;
+}
+
+.resto .trabajo .logo p:nth-of-type(2){
+    position: absolute;
+    color: white;
+    width: 60%;
+    top: 46%;
+    left: 20%;
+    transform: rotate(0deg);
+}
+
+.resto .trabajo p:nth-of-type(1){
+    position: absolute;
+    width: 28%;
+    top: 30%;
+    left: 20%;
+    transform: rotate(-2deg);
+}
+
+.resto .trabajo .foto{
+    position: absolute;
+    background: url('../fotos-plantilla/man-working.jpeg');
+    background-size: 100%;
+    background-position-y: 98%;
+    background-repeat: no-repeat;
+    top: 6%;
+    left: 13%;
+    height: 39.5%;
+    width: 77%;
+    z-index: 0;
+}
+
+.resto .trabajo .postit{
+    position: relative;
+    height: 21%;
+    width: 40%;
+    top: 24%;
+    left: 37%;
+}
+
+.resto .trabajo p:nth-of-type(2){
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    transform: rotate(-2deg);
+}
+
+.resto .trabajo p:nth-of-type(3){
+    position: absolute;
+    top: 83%;
+    left: 65%;
+    transform: rotate(-4deg);
+}
+
+
+/*---------------------GRUPOS-OTROS------------------*/
+
+.resto .otros{
+    position: relative;
+    top: 28%;
+    left: 0%;
+    height: 56%;
+    width: 100%;
+}
+
+.resto .otros .logo{
+    position: absolute;
+    background: url('../fotos-plantilla/otros.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 77%;
+    top: 5%;
+    height: 230px;
+    width: 230px;
+    z-index: 1;
+}
+
+.resto .otros .logo p:nth-of-type(1){
+    position: absolute;
+    top: 23%;
+    left: 37%;
+    font-size: 1.4em;
+}
+
+.resto .otros .logo p:nth-of-type(2){
+    position: absolute;
+    color: white;
+    width: 60%;
+    top: 40%;
+    left: 22%;
+    transform: rotate(0deg);
+}
+
+.resto .otros p:nth-of-type(1){
+    position: absolute;
+    width: 28%;
+    top: 32%;
+    left: 18%;
+    transform: rotate(-3deg);
+}
+
+.resto .otros .foto{
+    position: absolute;
+    background: url('../fotos-plantilla/ocio.jpg');
+    background-size: 100%;
+    background-position-y: 80%;
+    background-repeat: no-repeat;
+    top: 11%;
+    left: 13%;
+    height: 30%;
+    width: 76%;
+    z-index: 0;
+    transform:scaleX(-1);
+}
+
+.resto .otros .postit{
+    position: relative;
+    height: 15%;
+    width: 40%;
+    top: 36%;
+    left: 7.4%;
+}
+
+.resto .otros p:nth-of-type(2){
+    position: absolute;
+    top: 77%;
+    left: 65%;
+    transform: rotate(-3deg);
+}
+
+.resto .otros p:nth-of-type(3){
+    position: absolute;
+    top: 83%;
+    left: 65%;
+    transform: rotate(-4deg);
+}
+/*----------------FOTER*/
+@media (max-width:880px){
+    .segunda .postit p:first-child{
+       font-size:1em;
+       margin-top:3%;
+       left:29%;
+       text-align: center;
+    }
+    .segunda .postit p:last-child{
+    font-size:1em; 
+    margin-top:1%;
+    }
+    .resto .personal p:nth-of-type(1){
+        top:9%;
+    }
+    .resto .trabajo p:nth-of-type(2){
+        left:30%;
+        top:47%;
+    }
+    .resto .trabajo p:nth-of-type(1){
+        top:41%;
+        left:37%;
+    }
+    .resto .familia p:nth-of-type(1){
+        top:22%;
+        left:31%;
+        font-size:0.8em;
+    }
+    .resto .otros p:nth-of-type(1){
+        top:25%;
+        left:44%;
+    }
+}
+@media (max-width:330px){
+    .segunda .gris{
+        background: none;
+    }
+    
+    .resto .otros .foto{
+        top:10%;
+    }
+    .resto .otros .postit{
+        width:85%;
+        font-size:0.8em;
+        top:37%;
+        left:7%;
+    }
+    
+    .resto .otros .logo{
+        left:19%;
+        top:13%;
+    }
+    .resto .otros .logo p:nth-of-type(1){
+        top:19%;
+        left:30%;
+    }
+    
+    .resto .otros .logo p:nth-of-type(2){
+        top: 38%;
+        left: 28%;
+        width: 39%;
+    }
+    .resto .personal .foto{
+        top:19%;
+        left:1%;
+        width: 77%;
+    }
+    .resto .personal .postit{
+        height: 21%;
+        width: 85%;
+        left:-6%;
+        top:17%;
+        
+    }
+    .resto .trabajo .postit{
+        height:32%;
+        top:29%;
+        left:18%;
+        width:72%;
+    }
+    .resto .trabajo p:nth-of-type(1){
+        top:8%;
+        left:37%;
+        font-size:0.8em;
+    }
+    .resto .trabajo p:nth-of-type(2){
+        left:31%;
+        top:19%;
+        font-size:0.8em;
+    }
+    .resto .trabajo .logo{
+        top:17%;
+        width: 62%;
+    }
+    .resto .familia .postit{
+        width:98%;
+        height:23%;
+        top:-12%;
+        left:-2%;
+    }
+    .resto .familia .foto{
+        top:57%;
+        left:10%;
+        height:71%;
+        width:80%;
+    }
+    .resto .familia .logo{
+        top:32%;
+        left:9%;
+        width: 62%;
+        height: 80%;
+       
+    }
+    .resto .familia .logo p:first-child{
+        top:3.8%;
+        
+    }
+    .resto .familia .logo p:last-child{
+        top:7.5%;
+        width: 71%;
+        left:28%;
+        
+    }
+    .resto .personal .logo{
+        top:10%;
+    }
+    .segunda .grupos{
+        top:37%;
+        background-size: 97%;
+        width: 43%;
+    }
+    
+    .segunda .gris .nombregrupos p{
+        height:4px;
+        font-size:14px;
+        width:20px;
+        margin-left:87%;
+    }
+    .segunda .postit{
+        top:3%;
+        left:3%;
+        width:100%;
+    }
+
+    .primera .logo{
+        background-size: 62%;
+        right: 19%;
+        top:19%;
+    }
+    .cambiar{
+        visibility: hidden;
+    }
+    .cambiarCasa{
+         visibility: hidden;
+    }
+    .cambiarTrabajo{
+        visibility: hidden;
+    }
+    .cambiarOtros{
+         visibility: hidden;
+    }
+    .resto .personal{
+        top:-10%;
+    }
+    .resto .familia{
+        top:11%;
+    }
+    .resto .trabajo{
+        top:45%;
+    }
+    .resto .otros{
+        top:25%;
+    }
+    .segunda{
+        height: 74%;
+    }
+    .segunda .gris .nombregrupos{
+        top:49%;
+    }
+    .segunda .gris #colores{
+        top:50%;
+    }
+    
+    .footer-distributed{
+        
+    }
+}
